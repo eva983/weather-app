@@ -1,0 +1,221 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	/*background-color: #f2f2f2;*/
+	font-family: 'Tilt', sans-serif;
+	background-color: #e0e5ec;
+	height: 100vh;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+.container {
+	max-width: 600px;
+	margin: 10px auto;
+	padding: 20px;
+	text-align: center;
+
+	background-color: #f3f5f8;
+    box-shadow: 20px 20px 60px #c9d1d9, -20px -20px 60px #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	border-radius: 10px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+}
+h1 {
+	margin-bottom: 20px;
+}
+
+h2{
+	margin-top: 25px;
+}
+h4 {margin-top: 5px;}
+form {
+	display: flex;
+	margin-bottom: 20px;
+	
+		
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		max-width: 500px;
+	
+
+
+}
+
+
+input[type="text"] {
+	flex-grow: 1;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+}
+button[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 5px;
+	cursor: pointer;
+}
+button[type="submit"]:hover {
+	background-color: #3e8e41;
+}
+
+@media only screen and (max-width: 768px) {
+    input[type="text"] {
+        font-size: 14px;
+		width: 100%;
+	    margin-bottom: 10px;
+    }
+    
+    button[type="submit"] {
+        font-size: 14px;
+		margin: 5px 0;
+    }
+	form {
+		flex-direction: column;
+		align-items: center;
+	  }
+}
+
+/*.weather {
+	background-color: white;
+	padding: 20px;
+	border-radius: 5px;
+	display: none;
+}*/
+	.weather {
+		width: 400px;
+		height: 400px;
+		border-radius: 50%;
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 52%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		
+
+	  }
+	  
+.weather-content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+.weather p {
+	margin-bottom: 10px;
+}
+
+.weather-icon {
+	width: 100px;
+	height: 100px;
+}
+
+.getlocation_btn {
+	
+	/*	background-color: #4285f4;
+		color: white;
+		border: none;
+		border-radius: 4px;
+		padding: 10px 20px;
+		font-size: 16px;
+		cursor: pointer; */
+
+	  background-color: #f3f5f8;
+      color: #4d4d4d;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 10px 10px 20px #c9d1d9, -10px -10px 20px #ffffff;
+      transition: all 0.2s ease-in-out;
+	  }
+	  
+	  .getlocation_btn:hover {
+		background-color: #1e66d8;
+	  }
+	#temp-toggle{
+		
+
+		position: absolute;
+		top: 80%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		background-color: #f0f2f7;
+		color: #4d4d4d;
+		border: none;
+		border-radius: 10px;
+		padding: 10px 30px;
+		font-size: 16px;
+		cursor: pointer;
+		box-shadow: 10px 10px 20px #c7d1db, -10px -10px 20px #c7d1db;
+		transition: all 0.2s ease-in-out;
+	  }
+
+	  #temp-toggle:hover{
+		background-color: #1e66d8;
+		}
+
+		
+    /* Media queries */
+    @media only screen and (max-width: 768px) {
+		h1 {
+		  font-size: 36px;
+		}
+  
+		.getlocation_btn {
+		  font-size: 18px;
+		  
+		}
+		
+
+	  
+	  
+	
+	.weather-icon {
+		width: 60px;
+		height: 60px;
+	}
+}
+  
+ @media only screen and (max-width: 480px) {
+		h1 {
+		  font-size: 24px;
+		}
+  
+		.getlocation_btn {
+		  font-size: 14px;
+		  
+		}
+	  
+	  .weather {
+		width: 90%;
+		border-radius: 0%;
+	}
+}
