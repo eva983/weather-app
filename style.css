@@ -4,14 +4,42 @@
 	padding: 0;
 }
 body {
-	background-color: #f2f2f2;
-	font-family: sans-serif;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;	
+	background-color: #86b1ec;
+
+	height: 100vh;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
 }
 .container {
-	max-width: 600px;
-	margin: 0 auto;
+	max-width: 400px;
+	margin: 10px auto;
 	padding: 20px;
 	text-align: center;
+
+	background-color: rgb(237 205 205 / 25%);
+
+    /*box-shadow: 20px 20px 60px #99b3ce, -20px -20px 60px #000;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	border-radius: 10px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+    }
 }
 h1 {
 	margin-bottom: 20px;
@@ -20,11 +48,35 @@ h1 {
 h2{
 	margin-top: 25px;
 }
-h4 {margin-top: 5px;}
+
+h3{
+	text-align: left;
+	color:#3f3b63
+}
+
+.date_cont {
+	margin-top: 2px;
+	text-align: left;
+    font-weight: 600;
+	color:#3f3b63;
+}
+.date-container {
+	position: absolute;
+    top: 25px;
+    right: 25px;
+}
 form {
 	display: flex;
 	margin-bottom: 20px;
+	
+		
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		max-width: 500px;
 }
+
+
 input[type="text"] {
 	flex-grow: 1;
 	padding: 10px;
@@ -32,16 +84,34 @@ input[type="text"] {
 	border-radius: 5px;
 }
 button[type="submit"] {
-	background-color: #4CAF50;
+	background-color: rgb(237 205 205 / 0%);
 	color: white;
 	border: none;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 20;
+	padding-top: 7px;
+	margin: 5px;
 	cursor: pointer;
 }
-button[type="submit"]:hover {
-	background-color: #3e8e41;
+
+
+@media only screen and (max-width: 768px) {
+    input[type="text"] {
+        font-size: 14px;
+		width: 100%;
+	    margin-bottom: 10px;
+    }
+    
+    button[type="submit"] {
+        font-size: 14px;
+		margin: 5px 0;
+    }
+	form {
+		flex-direction: column;
+		align-items: center;
+	  }
 }
+
 /*.weather {
 	background-color: white;
 	padding: 20px;
@@ -51,24 +121,36 @@ button[type="submit"]:hover {
 	.weather {
 		width: 400px;
 		height: 400px;
-		border-radius: 50%;
+		border-radius: 5%;
 		background-color: #fff;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		position: absolute;
-		top: 50%;
+		top: 60%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		background-color: rgb(237 205 205 / 25%);
+
+		
 
 	  }
+	  .rest {
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+	  }
 	  
-.weather-content {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+.weather-content{
+	text-align: center;
+	}
+	.city {
+	    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-weight: 600;
+    font-size: 20px;
 	}
 .weather p {
 	margin-bottom: 10px;
@@ -81,15 +163,102 @@ button[type="submit"]:hover {
 
 .getlocation_btn {
 	
-		background-color: #4285f4;
+	/*	background-color: #4285f4;
 		color: white;
 		border: none;
 		border-radius: 4px;
 		padding: 10px 20px;
 		font-size: 16px;
+		cursor: pointer; */
+
+		background-color: #f5d4ffbf;
+	
+		color: #000000;
+			
+		border: none;
+			
+		border-radius: 10px;
+			
+		padding: 10px 20px;
+			
+		font-size: 16px;
+			
 		cursor: pointer;
-	  }
+			
+		box-shadow: 3px 3px 3px #000000;
+			
+		transition: all 0.2s ease-in-out;
+			
+		}
 	  
 	  .getlocation_btn:hover {
-		background-color: #1e66d8;
+		background-color: #d5a4e6bf;
 	  }
+	#temp-toggle{
+		
+
+		position: absolute;
+		top: 90%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		background-color: #f5d4ffbf;
+	
+		color: #000000;
+			
+		border: none;
+			
+		border-radius: 10px;
+			
+		padding: 10px 20px;
+			
+		font-size: 16px;
+			
+		cursor: pointer;
+			
+		box-shadow: 3px 3px 3px #000000;
+			
+		transition: all 0.2s ease-in-out;
+	  }
+
+	  #temp-toggle:hover{
+		background-color: #1e66d8;
+		}
+
+		
+    /* Media queries */
+    @media only screen and (max-width: 768px) {
+		h1 {
+		  font-size: 36px;
+		}
+  
+		.getlocation_btn {
+		  font-size: 18px;
+		  
+		}
+		
+
+	  
+	  
+	
+	.weather-icon {
+		width: 60px;
+		height: 60px;
+	}
+}
+  
+ @media only screen and (max-width: 480px) {
+		h1 {
+		  font-size: 24px;
+		}
+  
+		.getlocation_btn {
+		  font-size: 14px;
+		  
+		}
+	  
+	  .weather {
+		width: 90%;
+		border-radius: 0%;
+	}
+}

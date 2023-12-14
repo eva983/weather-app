@@ -8,14 +8,14 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');  
     </style>
 </head>
 
 <body>
 
     <div class="container">
-        <h1>Weather App</h1>
+        
         <form>
             <input type="text" placeholder="Search City">
             <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
@@ -28,11 +28,19 @@
         <div class="getLocation"> 
             <button onclick="getLocation()" class="getlocation_btn">Get My Location</button>
         </div>
+     </div>
         <div class="weather">
+            <div class="date-container">
+            </div>
+            
+            <div class="city"></div>
+            <div class="rest"></div>
+           <img class="wicon" src="icon.png" width="100px">
+    <button id="temp-toggle" onclick="toggleTemperature()">← °F →</button>
 
         </div>
-        <button id="temp-toggle" onclick="toggleTemperature()">°F</button>
-    </div>
+           
+
     <script src="script.js"></script>
 </body>
 
